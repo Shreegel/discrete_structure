@@ -1,5 +1,6 @@
 //wap to display the boolean product of two zero one matrices of order m1xn1 and m2xn2 respectively
 #include<stdio.h>
+#include<stdlib.h>
 
 int OR(int a, int b)
 {
@@ -25,6 +26,12 @@ int main()
     scanf("%d%d",&m1,&n1);
         printf("Enter the order of matrix B: ");
     scanf("%d%d",&m2,&n2);
+    if(n1!=m2)
+    {
+    	printf("Product is not compatible!\n");
+    	printf("Exiting......\n");
+    	exit(1);
+	}
     printf("Enter the matrix A: \n");
     for (i=0;i<m1;i++)
     {
@@ -53,13 +60,6 @@ int main()
 			C[i][j]=sum;
 		}
 	}
-	
-	
-	
-	
-	
-	
-	
 	printf("Boolean Product of A and B is \n");
     for (i=0;i<m1;i++)
     {
